@@ -4,13 +4,14 @@
     color="white"
     flat
   >
-    <v-toolbar-side-icon>
+    <v-app-bar-nav-icon
+      name="logo">
       <v-img
         :src="require('@/assets/beer-logo.svg')"
         contain
         height="40"
       />
-    </v-toolbar-side-icon>
+    </v-app-bar-nav-icon>
     <v-toolbar-title>
       Henequet Brewery
     </v-toolbar-title>

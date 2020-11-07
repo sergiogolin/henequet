@@ -15,6 +15,7 @@
               min-height="70vh"
               rounded="lg"
             >
+              <router-view></router-view>
             </v-sheet>
           </v-col>
         </v-row>
