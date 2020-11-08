@@ -45,17 +45,6 @@ Hay varios aspectos susceptibles de ser mejorados en la aplicación:
 - Incluir _spinners_ de carga mientras se cargan los datos de la api.
 - Expandir los filtros para añadir nuevos campos por los que filtrar.
 - Mejorar la paginación, para lo cual sería necesario que la api devolviera el total de resultados (ahora mismo no lo hace).
+- Añadir notificaciones de éxito/error.
+- Crear baterías de tests.
 - Localizar a varios idiomas los textos de la aplicación.
-
-<!-- ### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/). -->
