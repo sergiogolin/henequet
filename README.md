@@ -39,7 +39,7 @@ https://punkapi.com/documentation/v2
 - Se ha incluido un botón "Choose for me" que elegirá una cerveza al azar y mostrará sus características.
 
 ## Posibles mejoras
-Hay varios aspectos susceptibles de ser mejorados en la aplicación:
+Hay varios aspectos susceptibles de ser mejorados en la aplicación dedicándole un poco de tiempo:
 - Hacer el entorno responsive para que se adapte automáticamente a distintos dispositivos.
 - Validar el rango de fechas en el filtro.
 - Incluir _spinners_ de carga mientras se cargan los datos de la api.
