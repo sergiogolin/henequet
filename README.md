@@ -1,7 +1,7 @@
 # Henequet brewery
 
-_Henequet es el nombre que se le daba en el Antiguo Egipto al tipo de cerveza más sencilla que se consumía a diario, y se puede hablar de ella como de una de las principales precursoras de la cerveza actual._\
-Henequet Brewery es el nombre de una hipotética cervecería con la que he creado este frontend.
+Henequet Brewery es el nombre de una hipotética cervecería para la que he creado este frontend.\\
+_Henequet es el nombre que se le daba en el Antiguo Egipto a un tipo de cerveza muy sencilla que se consumía a diario, y se puede hablar de ella como de una de las principales precursoras de la cerveza actual._
 
 ## Comenzando
 Puedes clonar el proyecto con GIT, o descargarte el código comprimido y descomprimirlo en tu equipo local.
