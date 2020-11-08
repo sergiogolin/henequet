@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
 
-const BeersList = () => import(/* webpackChunkName: "BeersList" */'@/components/beers/BeersList.vue')
+const BeersList = () => import(/* webpackChunkName: "BeersList" */'@/components/Beers/BeersList.vue')
 
 Vue.use(VueRouter)
 

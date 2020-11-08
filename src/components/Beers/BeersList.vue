@@ -51,14 +51,14 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { getRandomBeer } from '@/components/beers/beersService'
+import { getRandomBeer } from '@/components/Beers/beersService'
 
 export default {
   name: 'BeersList',
   components: {
-    BeersFilter: () => import('@/components/beers/BeersFilter'),
-    Beer: () => import('@/components/beers/Beer'),
-    BeerDetails: () => import('@/components/beers/BeerDetails'),
+    BeersFilter: () => import('@/components/Beers/BeersFilter'),
+    Beer: () => import('@/components/Beers/Beer'),
+    BeerDetails: () => import('@/components/Beers/BeerDetails'),
     Paginator: () => import('@/components/shared/Paginator')
   },
   data: () => ({
