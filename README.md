@@ -1,6 +1,6 @@
 # Henequet brewery
 
-Henequet Brewery es el nombre de una hipotética cervecería para la que he creado este frontend.\\
+Henequet Brewery es el nombre de una hipotética cervecería para la que he creado este frontend.\
 _Henequet es el nombre que se le daba en el Antiguo Egipto a un tipo de cerveza muy sencilla que se consumía a diario, y se puede hablar de ella como de una de las principales precursoras de la cerveza actual._
 
 ## Comenzando
