@@ -32,7 +32,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
                   v-model="filterModel.startDate"
-                  label="Start date"
+                  label="Start brewering date"
                   prepend-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"
@@ -55,7 +55,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
                   v-model="filterModel.endDate"
-                  label="End date"
+                  label="End brewering date"
                   prepend-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"
@@ -94,7 +94,7 @@ export default {
     alcoholicOptions: [
       { text: 'All', value: 'all' },
       { text: 'Alcoholic', value: 'alcoholic' },
-      { text: 'Non-alcoholic', value: 'non-alcoholic' }
+      { text: 'Alcohol-free', value: 'alcohol-free' }
     ]
   })
 }
