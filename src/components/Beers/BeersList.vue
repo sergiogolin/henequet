@@ -31,6 +31,11 @@
       </v-col>
     </v-row>
 
+    <Paginator
+      @previous-page="showPreviousPage"
+      @next-page="showNextPage"
+    />
+
     <v-dialog
       v-model="isShowingDetails"
       scrollable
@@ -47,22 +52,36 @@
 import BeersFilter from '@/components/beers/BeersFilter'
 import Beer from '@/components/beers/Beer'
 import BeerDetails from '@/components/beers/BeerDetails'
+import Paginator from '@/components/shared/Paginator'
 
-import { getAllBeers, getRandomBeer } from '@/components/beers/beersService'
+import { mapActions, mapGetters } from 'vuex'
+import { getRandomBeer } from '@/components/beers/beersService'
 
 export default {
   name: 'BeersList',
   components: {
     BeersFilter,
     Beer,
-    BeerDetails
+    BeerDetails,
+    Paginator
   },
   data: () => ({
-    beers: [],
     beerForDetails: null,
     isShowingDetails: false
   }),
+  computed: {
+    ...mapGetters({
+      beers: 'getData',
+      pagination: 'getPagination',
+      filters: 'getFilters'
+    })
+  },
   methods: {
+    ...mapActions([
+      'fetchDataPage',
+      'previousPage',
+      'nextPage'
+    ]),
     showDetails (beer) {
       this.beerForDetails = beer
       this.isShowingDetails = true
@@ -78,17 +97,15 @@ export default {
         .finally(() => {
         })
     },
-    fetchInitialData () {
-      getAllBeers()
-        .then(({ data }) => {
-          this.beers = data
-        })
-        .finally(() => {
-        })
+    showPreviousPage () {
+      this.previousPage()
+    },
+    showNextPage () {
+      this.nextPage()
     }
   },
   created () {
-    this.fetchInitialData()
+    this.fetchDataPage()
   }
 }
 </script>

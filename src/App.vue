@@ -3,7 +3,7 @@
 
     <Header />
 
-    <v-main class="grey lighten-3">
+    <v-main>
       <v-container>
         <v-row>
           <v-col cols="2">
@@ -14,6 +14,7 @@
             <v-sheet
               min-height="70vh"
               rounded="lg"
+              class="yellow lighten-2"
             >
               <router-view></router-view>
             </v-sheet>
@@ -25,7 +26,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
 import Header from './components/Layout/Header'
 import SideMenu from './components/Layout/SideMenu'
 

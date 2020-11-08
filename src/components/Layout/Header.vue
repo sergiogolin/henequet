@@ -1,7 +1,8 @@
 <template>
   <v-app-bar
     app
-    color="white"
+    color="primary"
+    class="white--text"
     flat
   >
     <v-app-bar-nav-icon

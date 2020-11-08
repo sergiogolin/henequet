@@ -12,7 +12,7 @@
           max-height="200px"
         ></v-img>
       <p
-        v-if="isAlcoholicFree(beer)"
+        v-if="isAlcoholFree(beer)"
         class="alcohol-free">
         Alcohol-free
       </p>
@@ -45,7 +45,7 @@ export default {
     showBeerDetails (beer) {
       this.$emit('show-beer-details', beer)
     },
-    isAlcoholicFree (beer) {
+    isAlcoholFree (beer) {
       return beer.abv < this.maxAbvForAlcoholicFree
     }
   }

@@ -1,10 +1,11 @@
 <template>
-  <v-sheet rounded="lg">
+  <v-sheet rounded="lg" class="yellow lighten-2">
     <v-list color="transparent">
       <v-list-item
         v-for="link in links"
         :key="link.text"
         link
+        active-class="primary white--text"
         :disabled="link.disabled"
         :to="link.href"
       >
@@ -24,27 +25,27 @@ export default {
   data: () => ({
     links: [
       {
-        text: 'Cervezas',
+        text: 'Beers',
         href: 'beers',
         disabled: false
       },
       {
-        text: 'Vinos',
+        text: 'Wines',
         href: 'wines',
         disabled: true
       },
       {
-        text: 'Licores',
+        text: 'Spirits',
         href: 'spirits',
         disabled: true
       },
       {
-        text: 'Combinados',
+        text: 'Cocktails',
         href: 'cocktails',
         disabled: true
       },
       {
-        text: 'Zumos',
+        text: 'Juices',
         href: 'juices',
         disabled: true
       }

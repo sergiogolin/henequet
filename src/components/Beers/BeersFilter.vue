@@ -1,7 +1,7 @@
 <template>
   <v-container
     class="beer-filter">
-    <v-row>
+    <v-row align="center">
       <v-col
         cols="9"
       >
@@ -41,6 +41,7 @@
               </template>
               <v-date-picker
                 v-model="filterModel.startDate"
+                type="month"
               ></v-date-picker>
             </v-menu>
           </v-col>
@@ -64,6 +65,7 @@
               </template>
               <v-date-picker
                 v-model="filterModel.endDate"
+                type="month"
               ></v-date-picker>
             </v-menu>
           </v-col>
@@ -73,8 +75,22 @@
 
       <v-col
         cols="3"
+        class="text-right"
+        align="center"
       >
-        Botón
+        <v-btn
+          color="primary"
+          class="mb-5"
+          @click="filterBeers">
+          <v-icon>mdi-filter</v-icon>
+          Filter
+        </v-btn>
+        <v-btn
+          color="primary"
+          @click="clearFilter">
+          <v-icon>mdi-close</v-icon>
+          Clear
+        </v-btn>
       </v-col>
     </v-row>
 
@@ -82,6 +98,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'BeersFilter',
   data: () => ({
@@ -96,14 +114,31 @@ export default {
       { text: 'Alcoholic', value: 'alcoholic' },
       { text: 'Alcohol-free', value: 'alcohol-free' }
     ]
-  })
+  }),
+  methods: {
+    ...mapActions([
+      'filterData'
+    ]),
+    filterBeers () {
+      this.filterData(this.filterModel)
+    },
+    clearFilter () {
+      this.filterModel = {
+        name: null,
+        startDate: null,
+        endDate: null,
+        type: 'all'
+      }
+      this.filterBeers()
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
   .beer-filter {
     padding: 0 2rem;
-    border: 1px solid black;
-    background-color: #fefbcb;
+    border-radius: 8px;
+    background-color: white;
   }
 </style>

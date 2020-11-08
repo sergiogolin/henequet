@@ -80,7 +80,7 @@
         <v-col cols="4">
           <p class="text-subtitle-2">Method:</p>
           <p v-if="beer.method.mash_temp">
-            Mash temp
+            Mash temp:
             <ul>
               <li
                 v-for="(mashTempItem, idx) in beer.method.mash_temp"
@@ -90,16 +90,12 @@
             </ul>
           </p>
 
-          <p class="text-subtitle-2">Fermentation:</p>
-          <p v-if="beer.fermentation">
-            Mash temp
-            <ul>
-              <li
-                v-for="(fermentationItem, idx) in beer.method.fermentation"
-                :key="'fermentation-' + idx">
-                {{ fermentationItem.temp.value }} {{ fermentationItem.temp.unit }}
-              </li>
-            </ul>
+          <p v-if="beer.method.fermentation">
+            Fermentation: {{ beer.method.fermentation.temp.value }} {{ beer.method.fermentation.temp.unit }}
+          </p>
+
+          <p v-if="beer.method.twist">
+            Twist: {{ beer.method.twist }}
           </p>
         </v-col>
 
