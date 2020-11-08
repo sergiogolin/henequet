@@ -32,7 +32,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
                   v-model="filterModel.startDate"
-                  label="Start brewering date"
+                  label="Brewed after"
                   prepend-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"
@@ -56,7 +56,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
                   v-model="filterModel.endDate"
-                  label="End brewering date"
+                  label="Brewed before"
                   prepend-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"

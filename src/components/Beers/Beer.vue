@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Beer',
   props: {
@@ -38,15 +40,17 @@ export default {
       required: true
     }
   },
-  data: () => ({
-    maxAbvForAlcoholicFree: process.env.VUE_APP_MAX_ABV_FOR_NON_ALCOHOLIC
-  }),
+  computed: {
+    ...mapGetters({
+      maxAbvForNonAlcoholic: 'getMaxAbvForNonAlcoholic'
+    })
+  },
   methods: {
     showBeerDetails (beer) {
       this.$emit('show-beer-details', beer)
     },
     isAlcoholFree (beer) {
-      return beer.abv < this.maxAbvForAlcoholicFree
+      return beer.abv < this.maxAbvForNonAlcoholic
     }
   }
 }

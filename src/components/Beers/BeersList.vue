@@ -32,6 +32,7 @@
     </v-row>
 
     <Paginator
+      :page="pagination.page"
       @previous-page="showPreviousPage"
       @next-page="showNextPage"
     />
@@ -49,21 +50,16 @@
 </template>
 
 <script>
-import BeersFilter from '@/components/beers/BeersFilter'
-import Beer from '@/components/beers/Beer'
-import BeerDetails from '@/components/beers/BeerDetails'
-import Paginator from '@/components/shared/Paginator'
-
 import { mapActions, mapGetters } from 'vuex'
 import { getRandomBeer } from '@/components/beers/beersService'
 
 export default {
   name: 'BeersList',
   components: {
-    BeersFilter,
-    Beer,
-    BeerDetails,
-    Paginator
+    BeersFilter: () => import('@/components/beers/BeersFilter'),
+    Beer: () => import('@/components/beers/Beer'),
+    BeerDetails: () => import('@/components/beers/BeerDetails'),
+    Paginator: () => import('@/components/shared/Paginator')
   },
   data: () => ({
     beerForDetails: null,

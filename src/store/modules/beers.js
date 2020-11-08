@@ -35,6 +35,7 @@ const buildFilterParams = (filters) => {
 // state
 const state = {
   data: [],
+  maxAbvForNonAlcoholic: 1,
   pagination: {
     page: 1,
     limit: 12
@@ -57,6 +58,9 @@ const getters = {
   },
   getFilters () {
     return state.filters
+  },
+  getMaxAbvForNonAlcoholic () {
+    return state.maxAbvForNonAlcoholic
   }
 }
 

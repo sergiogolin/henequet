@@ -3,6 +3,7 @@
     <v-col cols="6">
       <v-btn
         color="primary"
+        :disabled="page.toString() === '1'"
         @click="$emit('previous-page')"
       >
         <v-icon>mdi-chevron-left</v-icon>
@@ -23,6 +24,12 @@
 
 <script>
 export default {
-  name: 'Paginator'
+  name: 'Paginator',
+  props: {
+    page: {
+      type: [String, Number],
+      default: null
+    }
+  }
 }
 </script>
